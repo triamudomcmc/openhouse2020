@@ -1,0 +1,32 @@
+{
+  "name": "openhouse2020",
+  "version": "0.0.1-alpha",
+  "main": "index.js",
+  "repository": "https://github.com/iammarkps/openhouse2020",
+  "author": "Possawat Suksai<markkung08@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export -o dist"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "babel-plugin-emotion": "^10.0.23",
+    "emotion-theming": "^10.0.19",
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rebass": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.11",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/rebass": "^4.0.3",
+    "typescript": "^3.7.2"
+  }
+}
