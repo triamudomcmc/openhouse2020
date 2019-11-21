@@ -1,8 +1,4 @@
-import React from "react"
-import { Text, Heading } from "rebass"
+import React from 'react'
+import { Nav } from '../components/Nav'
 
-export default () => (
-  <Heading fontSize={[3, 4, 5]} fontWeight="bold" color="primary">
-    Text
-  </Heading>
-)
+export default () => <Nav></Nav>

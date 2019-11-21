@@ -49,6 +49,46 @@ export const GlobalStyle = () => (
         src: local('Sukhumvit Set');
         unicode-range: ${TH_UNICODE_RANGE};
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      b,
+      u,
+      i,
+      div {
+        cursor: default;
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: ${Fonts.display};
+      }
+
+      ::selection,
+      ::-webkit-selection {
+        background-color: rgba(0, 123, 255, 0.25);
+      }
+
+      body {
+        font-family: ${Fonts.body};
+        font-display: swap;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent !important;
+        margin: 0;
+        width: 100%;
+        background-color: #f1f5fa;
+      }
     `}
   />
 )
