@@ -19,8 +19,7 @@
     "emotion-theming": "^10.0.19",
     "next": "^9.1.4",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "rebass": "^4.0.7"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.11",
