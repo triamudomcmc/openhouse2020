@@ -1,6 +1,5 @@
-import {} from 'rebass'
 import styled from '@emotion/styled'
-import { Fonts } from '../design'
+import { Fonts, media } from '../design'
 
 const Wrapper = styled.div`
   align-items: baseline;
@@ -9,6 +8,10 @@ const Wrapper = styled.div`
   margin: auto;
   max-width: 1000px;
   padding-top: 24px;
+
+  ${media('TABLET')} {
+    display: none;
+  }
 `
 
 const Link = styled.a`
@@ -17,12 +20,17 @@ const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
   font-size: 16px;
-  color: #282c35;
+  color: #515151;
   font-weight: 700;
   font-family: ${Fonts.display};
+  transition: color 1s;
 
   :last-child {
     margin-right: 0px;
+  }
+
+  :hover {
+    color: black;
   }
 `
 
@@ -32,7 +40,7 @@ const Logo = styled.div`
 
 const Title = styled.h1`
   font-weight: 800;
-  font-size: 20px;
+  font-size: 16px;
 `
 
 const Menu = styled.div`
