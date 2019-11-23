@@ -1,6 +1,8 @@
 import { Global, css } from '@emotion/core'
 import reset from '../lib/reset'
 
+export { media } from './responsive'
+
 export function getSystemFonts() {
   return [
     '-apple-system',
@@ -17,17 +19,11 @@ export function getSystemFonts() {
 }
 
 export const Fonts = {
-  display: [
-    'Sukhumvit Set',
-    'Kanit',
-    'SF Pro Display',
-    'Montserrat',
-    ...getSystemFonts()
-  ].join(', '),
-  body: [...getSystemFonts()].join(', ')
+  display: ['Kanit', 'SF Pro Display', ...getSystemFonts()].join(', '),
+  body: getSystemFonts().join(', ')
 }
 
-const TH_UNICODE_RANGE = 'U+0E01-0E5B, U+200C-200D, U+25CC'
+const TH_UNICODE_RANGE = 'U+0E00–U+0E7F'
 
 export const GlobalStyle = () => (
   <Global
@@ -40,13 +36,6 @@ export const GlobalStyle = () => (
         font-weight: 400;
         font-display: swap;
         src: url('/assets/fonts/Kanit-Regular.woff2') format('woff2');
-        unicode-range: ${TH_UNICODE_RANGE};
-      }
-
-      @font-face {
-        font-family: 'Sukhumvit Set';
-        font-display: swap;
-        src: local('Sukhumvit Set');
         unicode-range: ${TH_UNICODE_RANGE};
       }
 
@@ -87,7 +76,7 @@ export const GlobalStyle = () => (
         -webkit-tap-highlight-color: transparent !important;
         margin: 0;
         width: 100%;
-        background-color: #f1f5fa;
+        background-color: white;
       }
     `}
   />
