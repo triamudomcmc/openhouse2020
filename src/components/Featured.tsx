@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Card } from './Card'
+
+import { FeaturedCard } from './Card'
+import { TUCMC, TUSC, AIC } from './Logo'
 
 const Wrapper = styled.div`
   max-width: 100%;
-  height: 70vh;
   color: white;
   text-align: center;
   background-color: black;
@@ -53,7 +54,32 @@ const DiagTop = styled.div`
 const DiagBottom = styled.div`
   border-style: solid;
   border-width: 50px 100vw 0 0;
-  border-color: black transparent transparent transparent;
+  border-color: black #1c1e28 transparent transparent;
+`
+
+const Title = styled.h1`
+  font-size: 48px;
+`
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+
+  svg {
+    margin-left: 24px;
+    fill: grey;
+    transition: fill 1s;
+
+    :hover {
+      fill: #fff;
+    }
+
+    :first-of-type {
+      margin-left: 0px;
+    }
+  }
 `
 
 export const Featured = () => {
@@ -61,44 +87,149 @@ export const Featured = () => {
     <section>
       <DiagTop />
       <Wrapper>
-        <h1>Featured</h1>
+        <Title>Featuring</Title>
         <FeaturedSliderWrapper>
           <FeaturedSlider>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
-            <Card width={280} height={254}>
-              <div>Hellooooooo</div>
-            </Card>
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
+            <FeaturedCard
+              width={280}
+              height={200}
+              bordered
+              title="Hellooooooo"
+              imgSrc=""
+            />
           </FeaturedSlider>
         </FeaturedSliderWrapper>
+        <LogoWrapper>
+          <TUCMC />
+          <TUSC />
+          {/* <AIC /> */}
+        </LogoWrapper>
       </Wrapper>
       <DiagBottom />
     </section>
