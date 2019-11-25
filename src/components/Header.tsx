@@ -4,24 +4,30 @@ import styled from '@emotion/styled'
 import { media } from '../design'
 
 const fadeIn = keyframes`
-     from {
+  from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 `
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 47px);
+  min-height: calc(95vh - 47px);
   max-width: 1000px;
   display: flex;
   margin: auto;
   align-items: center;
   animation: ${fadeIn} 2s cubic-bezier(0.39, 0.575, 0.565, 1);
 
+  ${media('IPAD_PRO')} {
+    max-width: 800px;
+  }
+
   ${media('TABLET')} {
-    min-height: 100vh;
+    min-height: 95vh;
+    padding-left: 24px;
   }
 `
 
