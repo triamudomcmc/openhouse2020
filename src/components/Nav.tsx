@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Moon } from 'react-feather'
 import { Fonts, media } from '../design'
 
 const Wrapper = styled.div`
@@ -8,6 +9,10 @@ const Wrapper = styled.div`
   margin: auto;
   max-width: 1000px;
   padding-top: 24px;
+
+  ${media('IPAD_PRO')} {
+    max-width: 800px;
+  }
 
   ${media('TABLET')} {
     display: none;
@@ -49,6 +54,10 @@ const Menu = styled.div`
   flex-grow: 4;
 `
 
+const DarkModeMoon = styled(Moon)`
+  cursor: pointer;
+`
+
 export const Nav = () => {
   return (
     <Wrapper>
@@ -62,6 +71,7 @@ export const Nav = () => {
         <Link>ตารางเวลา</Link>
         <Link>การเดินทาง</Link>
         <Link>ลงทะเบียน</Link>
+        <DarkModeMoon size={18} />
       </Menu>
     </Wrapper>
   )
