@@ -82,6 +82,24 @@ const LogoWrapper = styled.div`
   }
 `
 
+const MockData = [
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020',
+  'Triam Udom Open House 2020'
+]
+
 export const Featured = () => {
   return (
     <section>
@@ -90,139 +108,15 @@ export const Featured = () => {
         <Title>Featuring</Title>
         <FeaturedSliderWrapper>
           <FeaturedSlider>
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
-            <FeaturedCard
-              width={280}
-              height={200}
-              bordered
-              title="Hellooooooo"
-              imgSrc=""
-            />
+            {MockData.map(val => (
+              <FeaturedCard
+                width={280}
+                height={200}
+                bordered
+                title={val}
+                imgSrc=""
+              />
+            ))}
           </FeaturedSlider>
         </FeaturedSliderWrapper>
         <LogoWrapper>

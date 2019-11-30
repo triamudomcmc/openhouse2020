@@ -2,7 +2,8 @@ import styled from '@emotion/styled'
 
 export const Card = styled.div<{
   width: number
-  height: number
+  minHeight?: number
+  height?: number
   flex?: boolean
   bg?: string
   bordered?: boolean
@@ -19,8 +20,11 @@ export const Card = styled.div<{
   color: white;
   background-color: ${props => (props.bg ? props.bg : '#111111')};
   ${props => (props.flex ? `display: flex; flex-direction: column;` : '')}
-  ${props => `width: ${props.width}px`};
-  ${props => `height: ${props.height}px`};
+  ${props => `width: ${props.width}px;`}
+  ${props =>
+    !props.height && props.minHeight ? `min-height: ${props.minHeight}px;` : ''}
+  ${props =>
+    !props.minHeight && props.height ? `height: ${props.height}px;` : ''}
 `
 
 const FeaturedCardImage = styled.figure`
@@ -51,7 +55,7 @@ export const FeaturedCard = (props: {
   <Card
     flex
     width={props.width}
-    height={props.height}
+    minHeight={props.height}
     bg={props.bg}
     bordered={props.bordered}
   >
