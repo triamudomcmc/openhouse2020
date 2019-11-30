@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   }
 
   ${media('TABLET')} {
-    min-height: 95vh;
+    min-height: 85vh;
     padding-left: 24px;
   }
 `
