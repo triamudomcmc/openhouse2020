@@ -27,8 +27,8 @@ const FeaturedSlider = styled.div`
   grid-column-gap: 24px;
   grid-auto-flow: column;
   overflow-y: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   ::before {
     content: '';
@@ -41,7 +41,7 @@ const FeaturedSlider = styled.div`
   }
 
   ::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+    display: none;
   }
 `
 
