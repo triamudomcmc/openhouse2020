@@ -1,17 +1,9 @@
 import React, { Dispatch, SetStateAction, useEffect } from 'react'
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
 import { useTransition, animated } from 'react-spring'
 
-import { useModal } from './ModalContext'
-
-const overlay = css`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-`
+import { useOverlay } from './OverlayContext'
+import { overlay } from '../design'
 
 const Wrapper = styled(animated.div)`
   ${overlay}
@@ -54,7 +46,7 @@ export const Modal: React.FC<{
   open: boolean
   setModalState: Dispatch<SetStateAction<Boolean>>
 }> = props => {
-  const setGlobalClip = useModal()
+  const setGlobalClip = useOverlay()
 
   useEffect(() => {
     setGlobalClip(props.open)

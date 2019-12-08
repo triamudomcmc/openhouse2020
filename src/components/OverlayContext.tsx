@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useLayoutEffect } from 'react'
 
 const defaultSetState: React.Dispatch<React.SetStateAction<boolean>> = () => {}
-const ModalContext = React.createContext(defaultSetState)
+const OverlayContext = React.createContext(defaultSetState)
 
-export const ModalProvider: React.FC = props => {
+export const OverlayProvider: React.FC = props => {
   const [modalOpen, setModalState] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof document !== undefined) {
       const body = document.getElementsByTagName('body')
 
@@ -15,10 +15,10 @@ export const ModalProvider: React.FC = props => {
   }, [modalOpen])
 
   return (
-    <ModalContext.Provider value={setModalState}>
+    <OverlayContext.Provider value={setModalState}>
       {props.children}
-    </ModalContext.Provider>
+    </OverlayContext.Provider>
   )
 }
 
-export const useModal = () => useContext(ModalContext)
+export const useOverlay = () => useContext(OverlayContext)
