@@ -74,7 +74,6 @@ export const GlobalStyle = () => (
         font-display: swap;
         box-sizing: border-box;
         -webkit-tap-highlight-color: transparent !important;
-        margin: 0;
         width: 100%;
         background-color: white;
       }
@@ -89,3 +88,11 @@ export const theme = {
     monospace: 'Menlo, monospace'
   }
 }
+
+export const overlay = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+`

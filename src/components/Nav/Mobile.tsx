@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { animated, useSpring } from 'react-spring'
 import { Menu, X } from 'react-feather'
+
 import { Link, Wrapper, Logo, Title } from './Common'
 import { media } from '../../design'
 
@@ -32,7 +33,7 @@ export const Mobile = () => {
 
   const menuTransitions = useSpring({
     visibility: expanded ? 'visible' : 'hidden',
-    height: expanded ? 192 : 0
+    height: expanded ? 168 : 0
   })
 
   return (
