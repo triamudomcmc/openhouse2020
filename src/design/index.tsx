@@ -55,6 +55,11 @@ export const GlobalStyle = () => (
         margin: 0;
       }
 
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
       h1,
       h2,
       h3,
@@ -76,6 +81,11 @@ export const GlobalStyle = () => (
         -webkit-tap-highlight-color: transparent !important;
         width: 100%;
         background-color: white;
+      }
+
+      ul {
+        text-align: start;
+        list-style-position: inside;
       }
     `}
   />

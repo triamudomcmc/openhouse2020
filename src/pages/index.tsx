@@ -4,7 +4,7 @@ import { Nav } from '../components/Nav'
 import { Header } from '../components/Header'
 import { Featured } from '../components/Featured'
 import { Inside } from '../components/Inside'
-import { OverlayProvider } from '../components/OverlayContext'
+import { Direction } from '../components/Direction'
 
 export default () => {
   return (
@@ -13,6 +13,9 @@ export default () => {
       <Header />
       <Featured />
       <Inside />
+      <section>
+        <Direction />
+      </section>
     </OverlayProvider>
   )
 }

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { media, Fonts } from '../design'
 
 export const Card = styled.div<{
   width: number
@@ -18,18 +19,27 @@ export const Card = styled.div<{
   border-width: 0.5px;`
       : ''}
 
+  font-family: ${Fonts.display};
+
   ${props => (props.padding ? 'padding: 24px;' : '')}
 
   ${props => (props.curved ? 'border-radius: 8px;' : '')}
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  color: white;
+  color: ${props => (props.bg === 'white' ? 'black' : 'white')};
+
   background-color: ${props => (props.bg ? props.bg : '#111111')};
   ${props => (props.flex ? `display: flex; flex-direction: column;` : '')}
   ${props => `width: ${props.width}px;`}
+  max-width: 100%;
+  overflow: auto;
   ${props =>
     !props.height && props.minHeight ? `min-height: ${props.minHeight}px;` : ''}
   ${props =>
     !props.minHeight && props.height ? `height: ${props.height}px;` : ''}
+
+  ${media('TABLET')} {
+    width: 75vw;
+  }
 `
 
 const FeaturedCardImage = styled.figure`
@@ -59,6 +69,7 @@ export const FeaturedCard = (props: {
 }) => (
   <Card
     flex
+    curved
     width={props.width}
     minHeight={props.height}
     bg={props.bg}
