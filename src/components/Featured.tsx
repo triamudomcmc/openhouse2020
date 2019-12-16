@@ -102,7 +102,7 @@ const MockData = [
 
 export const Featured = () => {
   return (
-    <section>
+    <React.Fragment>
       <DiagTop />
       <Wrapper>
         <Title>Featuring</Title>
@@ -126,6 +126,6 @@ export const Featured = () => {
         </LogoWrapper>
       </Wrapper>
       <DiagBottom />
-    </section>
+    </React.Fragment>
   )
 }

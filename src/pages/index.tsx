@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { OverlayProvider } from '../components/OverlayContext'
+
 import { Nav } from '../components/Nav'
 import { Header } from '../components/Header'
 import { Featured } from '../components/Featured'
@@ -9,10 +11,18 @@ import { Direction } from '../components/Direction'
 export default () => {
   return (
     <OverlayProvider>
-      <Nav />
-      <Header />
-      <Featured />
-      <Inside />
+      <section>
+        <Nav />
+      </section>
+      <section>
+        <Header />
+      </section>
+      <section>
+        <Featured />
+      </section>
+      <section>
+        <Inside />
+      </section>
       <section>
         <Direction />
       </section>

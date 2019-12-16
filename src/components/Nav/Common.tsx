@@ -22,7 +22,6 @@ export const Wrapper = styled.div`
 `
 
 export const Link = styled.a`
-  color: #000;
   margin-right: 20px;
   text-decoration: none;
   cursor: pointer;
