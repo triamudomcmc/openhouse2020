@@ -17,11 +17,13 @@
     "@emotion/styled": "^10.0.23",
     "babel-plugin-emotion": "^10.0.23",
     "emotion-theming": "^10.0.19",
+    "formik": "^2.0.8",
     "next": "^9.1.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "yup": "^0.28.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.11",
