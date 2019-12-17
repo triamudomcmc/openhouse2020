@@ -1,5 +1,5 @@
 import React from 'react'
-import { DarkModeMoon, Link, Wrapper, Logo, Title } from './Common'
+import { SchoolLink, Link, Wrapper, Logo, Title } from './Common'
 import styled from '@emotion/styled'
 import { media } from '../../design'
 
@@ -19,6 +19,10 @@ const DesktopWrapper = styled(Wrapper)`
   }
 `
 
+const SchoolLinkWrapper = styled.a`
+  color: #515151;
+`
+
 export const Desktop = () => (
   <DesktopWrapper>
     <Logo>
@@ -31,7 +35,13 @@ export const Desktop = () => (
       <Link>ตารางเวลา</Link>
       <Link>การเดินทาง</Link>
       <Link>ลงทะเบียน</Link>
-      <DarkModeMoon size={18} />
+      <SchoolLinkWrapper
+        rel="noopener noreferrer"
+        href="http://www.triamudom.ac.th/"
+        target="_blank"
+      >
+        <SchoolLink size={18} />
+      </SchoolLinkWrapper>
     </DesktopMenu>
   </DesktopWrapper>
 )

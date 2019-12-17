@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { media, Fonts } from '../../design'
-import { Moon } from 'react-feather'
+import { BookOpen } from 'react-feather'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -60,6 +60,6 @@ export const Title = styled.h1`
   z-index: 9999;
 `
 
-export const DarkModeMoon = styled(Moon)`
+export const SchoolLink = styled(BookOpen)`
   cursor: pointer;
 `
