@@ -71,7 +71,7 @@ export const GlobalStyle = () => (
 
       ::selection,
       ::-webkit-selection {
-        background-color: rgba(0, 123, 255, 0.25);
+        background-color: #79ffe1;
       }
 
       body {
