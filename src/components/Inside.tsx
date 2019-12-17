@@ -29,7 +29,6 @@ const MenuWrapper = styled.div`
 
 const Link = styled(DefaultLink)`
   color: #d1d1d1;
-  margin: 0;
 
   :hover {
     color: white;
@@ -37,6 +36,7 @@ const Link = styled(DefaultLink)`
 
   ${media('TABLET')} {
     text-align: center !important;
+    margin: 0;
   }
 `
 
