@@ -30,6 +30,7 @@ const CardTitle = styled.h1`
 const List = styled.ul`
   list-style-type: none;
   padding-inline-start: 0;
+  margin-block-start: 0.75em;
 `
 
 const SubTitle = styled.h2`
