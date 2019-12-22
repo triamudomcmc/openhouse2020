@@ -53,10 +53,16 @@ const FeaturedCardImage = styled.figure`
   }
 `
 
-const FeaturedCardTitle = styled.div`
+const FeaturedCardTitleWrapper = styled.div`
   padding: 10px 20px 15px;
+`
+
+const FeaturedCardTitle = styled.h1`
   color: #fff;
   text-align: left;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
 `
 
 export const FeaturedCard = (props: {
@@ -78,8 +84,8 @@ export const FeaturedCard = (props: {
     <FeaturedCardImage>
       <img decoding="async" src={props.imgSrc}></img>
     </FeaturedCardImage>
-    <FeaturedCardTitle>
-      <h1>{props.title}</h1>
-    </FeaturedCardTitle>
+    <FeaturedCardTitleWrapper>
+      <FeaturedCardTitle>{props.title}</FeaturedCardTitle>
+    </FeaturedCardTitleWrapper>
   </Card>
 )

@@ -25,6 +25,10 @@ const Wrapper = styled.div`
 
 const CardTitle = styled.h1`
   text-align: left;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
 `
 
 const List = styled.ul`
@@ -34,6 +38,7 @@ const List = styled.ul`
 `
 
 const SubTitle = styled.h2`
+  color: #fff;
   text-align: left;
   font-size: 1.7em;
   margin-top: 48px;

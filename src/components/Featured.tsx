@@ -121,7 +121,7 @@ export const Featured = () => {
         </FeaturedSliderWrapper>
         <LogoWrapper>
           <TUCMC />
-          <TUSC />
+          {/* <TUSC /> */}
           {/* <AIC /> */}
         </LogoWrapper>
       </Wrapper>

@@ -77,6 +77,7 @@ export const GlobalStyle = () => (
       body {
         font-family: ${Fonts.body};
         font-display: swap;
+        font-size: 16px;
         box-sizing: border-box;
         -webkit-tap-highlight-color: transparent !important;
         width: 100%;

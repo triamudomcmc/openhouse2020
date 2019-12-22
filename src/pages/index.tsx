@@ -7,6 +7,7 @@ import { Header } from '../components/Header'
 import { Featured } from '../components/Featured'
 import { Inside } from '../components/Inside'
 import { Direction } from '../components/Direction'
+import { Register } from '../components/Register'
 
 export default () => {
   return (
@@ -25,6 +26,9 @@ export default () => {
       </section>
       <section>
         <Direction />
+      </section>
+      <section>
+        <Register />
       </section>
     </OverlayProvider>
   )
