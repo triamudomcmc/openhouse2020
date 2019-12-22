@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import { FeaturedCard } from './Card'
-import { TUCMC, TUSC, AIC } from './Logo'
+import { TUCMC } from './Logo'
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -22,8 +22,9 @@ const FeaturedSliderWrapper = styled.div`
 `
 
 const FeaturedSlider = styled.div`
-  max-width: 100%;
+  width: 100%;
   display: grid;
+  justify-items: center;
   grid-column-gap: 24px;
   grid-auto-flow: column;
   overflow-y: scroll;
@@ -82,22 +83,12 @@ const LogoWrapper = styled.div`
   }
 `
 
-const MockData = [
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020',
-  'Triam Udom Open House 2020'
+const Data = [
+  'ซุ้มชมรม',
+  'ซุ้มสายการเรียน',
+  'การแข่งขัน',
+  'TRIAM TALK',
+  'การแสดงจากชมรมต่าง ๆ'
 ]
 
 export const Featured = () => {
@@ -108,7 +99,7 @@ export const Featured = () => {
         <Title>Featuring</Title>
         <FeaturedSliderWrapper>
           <FeaturedSlider>
-            {MockData.map(val => (
+            {Data.map(val => (
               <FeaturedCard
                 width={280}
                 height={200}
@@ -121,8 +112,6 @@ export const Featured = () => {
         </FeaturedSliderWrapper>
         <LogoWrapper>
           <TUCMC />
-          {/* <TUSC /> */}
-          {/* <AIC /> */}
         </LogoWrapper>
       </Wrapper>
       <DiagBottom />

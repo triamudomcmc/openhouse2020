@@ -3,21 +3,7 @@ import styled from '@emotion/styled'
 import { Card } from './Card'
 import { Link as DefaultLink } from './Nav/Common'
 import { media } from '../design'
-
-const Wrapper = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  color: white;
-  text-align: center;
-  background-color: #1c1e28;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
+import { Wrapper } from './Wrapper'
 
 const MenuWrapper = styled.div`
   display: flex;

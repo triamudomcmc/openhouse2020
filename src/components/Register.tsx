@@ -2,29 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { Form, Icon, Input, Button, Radio, Select } from 'antd'
 
-import { media } from '../design'
 import { Card } from './Card'
 import { FormComponentProps } from 'antd/lib/form'
-
-const Wrapper = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  color: white;
-  text-align: center;
-  background-color: #1c1e28;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  ${media('TABLET')} {
-    min-height: 100vh;
-    height: unset;
-  }
-`
+import { Wrapper } from './Wrapper'
 
 const CardTitle = styled.h1`
   text-align: left;
