@@ -8,6 +8,7 @@ import { Featured } from '../components/Featured'
 import { Inside } from '../components/Inside'
 import { Direction } from '../components/Direction'
 import { Register } from '../components/Register'
+import { Schedule } from '../components/Schedule'
 
 export default () => {
   return (
@@ -23,6 +24,9 @@ export default () => {
       </section>
       <section>
         <Inside />
+      </section>
+      <section>
+        <Schedule />
       </section>
       <section>
         <Direction />
