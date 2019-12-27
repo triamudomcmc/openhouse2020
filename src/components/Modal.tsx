@@ -29,6 +29,15 @@ const Content = styled.div`
   align-items: center;
 `
 
+export const ContentWrapper = styled.div`
+  margin-top: 24px;
+`
+
+export const CloseWrapper = styled.div`
+  text-align: end;
+  width: 100%;
+`
+
 /**
  * 
  * <Modal open={modalState} setModalState={setModalState}>
