@@ -83,11 +83,14 @@ const LogoWrapper = styled.div`
   }
 `
 
+/**
+ * @todo Implement data
+ */
 const Data = [
   'ซุ้มชมรม',
   'ซุ้มสายการเรียน',
   'การแข่งขัน',
-  'TRIAM TALK',
+  'TRIAMTALK',
   'การแสดงจากชมรมต่าง ๆ'
 ]
 
