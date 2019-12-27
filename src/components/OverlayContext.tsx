@@ -8,7 +8,7 @@ export const OverlayProvider: React.FC = props => {
 
   useLayoutEffect(() => {
     if (typeof document !== undefined) {
-      const body = document.getElementsByTagName('body')
+      const body = document.getElementsByTagName('html')
 
       body[0].setAttribute('style', modalOpen ? 'overflow: hidden;' : '')
     }

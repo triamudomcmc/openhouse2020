@@ -14,7 +14,7 @@ const Wrapper = styled(animated.div)`
   z-index: 10000;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 `
 
 const Background = styled.div`
@@ -53,7 +53,7 @@ export const Modal: React.FC<{
   }, [props.open])
 
   const transitions = useTransition(props.open, null, {
-    from: { position: 'absolute', opacity: 0, display: 'none' },
+    from: { position: 'fixed', opacity: 0, display: 'none' },
     enter: { opacity: 1, display: 'flex' },
     leave: { opacity: 0, display: 'none' }
   })
