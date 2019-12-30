@@ -35,6 +35,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-weight: 800;
   font-size: 72px;
+  line-height: 1.15;
 `
 
 export const Header = () => {
