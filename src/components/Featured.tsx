@@ -86,27 +86,27 @@ const LogoWrapper = styled.div`
 const Data = [
   {
     title: 'ซุ้มชมรม',
-    src: '/assets/img/banner1.jpg',
+    src: '/assets/img/banner1',
     link: '#inside'
   },
   {
     title: 'ซุ้มสายการเรียน',
-    src: '/assets/img/banner5.jpg',
+    src: '/assets/img/banner5',
     link: '#inside'
   },
   {
     title: 'การแข่งขัน',
-    src: '/assets/img/banner4.jpg',
+    src: '/assets/img/banner4',
     link: '#inside'
   },
   {
     title: 'TRIAMTALK',
-    src: '/assets/img/banner3.jpg',
+    src: '/assets/img/banner3',
     link: 'https://www.facebook.com/triamtalk/'
   },
   {
     title: 'การแสดงจากชมรมต่าง ๆ',
-    src: '/assets/img/banner2.jpg',
+    src: '/assets/img/banner2',
     link: '#schedule'
   }
 ]

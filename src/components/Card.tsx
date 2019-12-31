@@ -45,6 +45,11 @@ const FeaturedCardImage = styled.figure`
   margin: 0;
   overflow: hidden;
 
+  picture {
+    width: 100%;
+    height: 100%;
+  }
+
   img {
     object-fit: cover;
     width: 100%;
@@ -89,7 +94,11 @@ export const FeaturedCard = (props: {
     bordered={props.bordered}
   >
     <FeaturedCardImage>
-      <img decoding="async" src={props.imgSrc}></img>
+      <picture>
+        <source srcSet={`${props.imgSrc}.webp`} type="image/webp" />
+        <source srcSet={`${props.imgSrc}.jpg`} type="image/jpeg" />
+        <img decoding="async" src={`${props.imgSrc}.jpg`} alt={props.title} />
+      </picture>
     </FeaturedCardImage>
     <FeaturedCardTitleWrapper>
       <FeaturedCardTitle>{props.title}</FeaturedCardTitle>

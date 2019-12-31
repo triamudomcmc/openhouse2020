@@ -23,7 +23,7 @@ export const CustomHead = () => (
     <meta name="twitter:image:alt" content="Triam Udom Open House 2020" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
     <title>Triam Udom Open House 2020</title>
   </Head>
