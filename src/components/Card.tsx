@@ -36,7 +36,7 @@ export const Card = styled.div<{
   ${props => (props.height ? `height: ${props.height}px;` : '')}
 
   ${media('TABLET')} {
-    width: 75vw;
+    width: 85vw;
   }
 `
 

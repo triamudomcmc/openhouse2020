@@ -2,6 +2,7 @@ import React from 'react'
 import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import { media } from '../design'
+import { Register } from './Register'
 
 const fadeIn = keyframes`
   from {
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
   min-height: calc(95vh - 47px);
   max-width: 1000px;
   display: flex;
+  justify-content: space-between;
   margin: auto;
   align-items: center;
   animation: ${fadeIn} 2s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -26,9 +28,8 @@ const Wrapper = styled.div`
   }
 
   ${media('TABLET')} {
-    max-width: 100%;
-    min-height: 85vh;
-    padding-left: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `
 
@@ -38,14 +39,29 @@ const Title = styled.h1`
   line-height: 1.15;
 `
 
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-height: 100vh;
+  padding-left: 24px;
+`
+
+const RegisterWrapper = styled.div``
+
 export const Header = () => {
   return (
     <Wrapper>
-      <div>
-        <Title>TRIAM UDOM</Title>
-        <Title>OPEN HOUSE</Title>
-        <Title>2020</Title>
-      </div>
+      <TitleWrapper>
+        <div>
+          <Title>TRIAM UDOM</Title>
+          <Title>OPEN HOUSE</Title>
+          <Title>2020</Title>
+        </div>
+      </TitleWrapper>
+
+      <Register />
     </Wrapper>
   )
 }

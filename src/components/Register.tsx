@@ -129,7 +129,7 @@ export const RegisterForm = (
           ]
         })(
           <Radio.Group onChange={handleTypeChange}>
-            <Radio.Button value="student">นักเรียน</Radio.Button>
+            <Radio.Button value="student">นักเรียน/นักศึกษา</Radio.Button>
             <Radio.Button value="parent">ผู้ปกครอง</Radio.Button>
             <Radio.Button value="teacher">ครู/อาจารย์</Radio.Button>
             <Radio.Button value="other">อื่น ๆ</Radio.Button>
@@ -202,31 +202,29 @@ export const Register = () => {
   }
 
   return (
-    <Wrapper>
-      <Card width={400} minHeight={400} curved padding bg="white">
-        <CardTitle>ลงทะเบียน</CardTitle>
-        <ContentWrapper>
-          {key === '' ? (
-            <RegisterComponent submitToFirebase={submitToFirebase} />
-          ) : (
-            <div>
-              <p>โปรดถ่ายภาพหน้าจอไว้เพื่อยืนยันในการเข้างาน</p>
-              <QRWrapper>
-                <QR value={key} id="qrcanvas" size={256} />
-              </QRWrapper>
-              <br />
-              <Link
-                onClick={() => {
-                  setKey('')
-                }}
-              >
-                ลงทะเบียนอีกครั้ง
-              </Link>
-            </div>
-          )}
-        </ContentWrapper>
-      </Card>
-    </Wrapper>
+    <Card width={430} minHeight={400} curved padding bg="white">
+      <CardTitle>ลงทะเบียน</CardTitle>
+      <ContentWrapper>
+        {key === '' ? (
+          <RegisterComponent submitToFirebase={submitToFirebase} />
+        ) : (
+          <div>
+            <p>โปรดถ่ายภาพหน้าจอไว้เพื่อยืนยันในการเข้างาน</p>
+            <QRWrapper>
+              <QR value={key} id="qrcanvas" size={256} />
+            </QRWrapper>
+            <br />
+            <Link
+              onClick={() => {
+                setKey('')
+              }}
+            >
+              ลงทะเบียนอีกครั้ง
+            </Link>
+          </div>
+        )}
+      </ContentWrapper>
+    </Card>
   )
 }
 

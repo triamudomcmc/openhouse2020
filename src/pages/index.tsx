@@ -8,7 +8,6 @@ import { Header } from '../components/Header'
 import { Featured } from '../components/Featured'
 import { Inside } from '../components/Inside'
 import { Direction } from '../components/Direction'
-import { Register } from '../components/Register'
 import { Schedule } from '../components/Schedule'
 
 export default () => {
@@ -32,9 +31,6 @@ export default () => {
       </section>
       <section id="direction">
         <Direction />
-      </section>
-      <section id="register">
-        <Register />
       </section>
     </OverlayProvider>
   )

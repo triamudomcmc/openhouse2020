@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 
 import { FeaturedCard } from './Card'
 import { TUCMC } from './Logo'
+import { media } from '../design'
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -50,6 +51,10 @@ const DiagTop = styled.div`
   border-style: solid;
   border-width: 50px 100vw 0 0;
   border-color: transparent black transparent transparent;
+
+  ${media('TABLET')} {
+    margin-top: 48px;
+  }
 `
 
 const DiagBottom = styled.div`

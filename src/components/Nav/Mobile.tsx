@@ -56,7 +56,6 @@ export const Mobile = () => {
             <Link href="/assets/img/map.jpg">แผนที่</Link>
             <Link href="#schedule">ตารางเวลา</Link>
             <Link href="#direction">การเดินทาง</Link>
-            <Link href="#register">ลงทะเบียน</Link>
           </MobileMenuWrapper>
         </animated.div>
       </MobileNav>
