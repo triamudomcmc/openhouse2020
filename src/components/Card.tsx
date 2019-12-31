@@ -32,10 +32,8 @@ export const Card = styled.div<{
   ${props => `width: ${props.width}px;`}
   max-width: 100%;
   overflow: auto;
-  ${props =>
-    !props.height && props.minHeight ? `min-height: ${props.minHeight}px;` : ''}
-  ${props =>
-    !props.minHeight && props.height ? `height: ${props.height}px;` : ''}
+  ${props => (props.minHeight ? `min-height: ${props.minHeight}px;` : '')}
+  ${props => (props.height ? `height: ${props.height}px;` : '')}
 
   ${media('TABLET')} {
     width: 75vw;
@@ -54,7 +52,7 @@ const FeaturedCardImage = styled.figure`
 `
 
 const FeaturedCardTitleWrapper = styled.div`
-  padding: 10px 20px 15px;
+  padding: 15px 20px 15px;
 `
 
 const FeaturedCardTitle = styled.h1`
@@ -65,6 +63,15 @@ const FeaturedCardTitle = styled.h1`
   line-height: 1.15;
 `
 
+const CustomCard = styled(Card)`
+  transition: all 1s;
+  cursor: pointer;
+
+  :hover {
+    border-color: white;
+  }
+`
+
 export const FeaturedCard = (props: {
   width: number
   height: number
@@ -73,7 +80,7 @@ export const FeaturedCard = (props: {
   bg?: string
   bordered?: boolean
 }) => (
-  <Card
+  <CustomCard
     flex
     curved
     width={props.width}
@@ -87,5 +94,5 @@ export const FeaturedCard = (props: {
     <FeaturedCardTitleWrapper>
       <FeaturedCardTitle>{props.title}</FeaturedCardTitle>
     </FeaturedCardTitleWrapper>
-  </Card>
+  </CustomCard>
 )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { BackTop } from 'antd'
 
 import { OverlayProvider } from '../components/OverlayContext'
 
@@ -13,25 +14,26 @@ import { Schedule } from '../components/Schedule'
 export default () => {
   return (
     <OverlayProvider>
+      <BackTop />
       <section>
         <Nav />
       </section>
-      <section>
+      <section id="header">
         <Header />
       </section>
-      <section>
+      <section id="featured">
         <Featured />
       </section>
-      <section>
+      <section id="inside">
         <Inside />
       </section>
-      <section>
+      <section id="schedule">
         <Schedule />
       </section>
-      <section>
+      <section id="direction">
         <Direction />
       </section>
-      <section>
+      <section id="register">
         <Register />
       </section>
     </OverlayProvider>

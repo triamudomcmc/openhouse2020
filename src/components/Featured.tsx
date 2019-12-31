@@ -83,15 +83,32 @@ const LogoWrapper = styled.div`
   }
 `
 
-/**
- * @todo Implement data
- */
 const Data = [
-  'ซุ้มชมรม',
-  'ซุ้มสายการเรียน',
-  'การแข่งขัน',
-  'TRIAMTALK',
-  'การแสดงจากชมรมต่าง ๆ'
+  {
+    title: 'ซุ้มชมรม',
+    src: '/assets/img/banner1.jpg',
+    link: '#inside'
+  },
+  {
+    title: 'ซุ้มสายการเรียน',
+    src: '/assets/img/banner5.jpg',
+    link: '#inside'
+  },
+  {
+    title: 'การแข่งขัน',
+    src: '/assets/img/banner4.jpg',
+    link: '#inside'
+  },
+  {
+    title: 'TRIAMTALK',
+    src: '/assets/img/banner3.jpg',
+    link: 'https://www.facebook.com/triamtalk/'
+  },
+  {
+    title: 'การแสดงจากชมรมต่าง ๆ',
+    src: '/assets/img/banner2.jpg',
+    link: '#schedule'
+  }
 ]
 
 export const Featured = () => {
@@ -103,13 +120,15 @@ export const Featured = () => {
         <FeaturedSliderWrapper>
           <FeaturedSlider>
             {Data.map(val => (
-              <FeaturedCard
-                width={280}
-                height={200}
-                bordered
-                title={val}
-                imgSrc=""
-              />
+              <a href={val.link}>
+                <FeaturedCard
+                  width={280}
+                  height={240}
+                  bordered
+                  title={val.title}
+                  imgSrc={val.src}
+                />
+              </a>
             ))}
           </FeaturedSlider>
         </FeaturedSliderWrapper>
