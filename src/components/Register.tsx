@@ -9,11 +9,16 @@ import { Card } from './Card'
 import { Wrapper } from './Wrapper'
 import { ContentWrapper } from './Modal'
 import { api } from '../lib/api'
+import { Link } from './Nav/Common'
 
 const CardTitle = styled.h1`
   text-align: left;
   font-weight: 700;
   line-height: 1.15;
+`
+
+const QRWrapper = styled.div`
+  margin-top: 24px;
 `
 
 const { Option } = Select
@@ -204,7 +209,20 @@ export const Register = () => {
           {key === '' ? (
             <RegisterComponent submitToFirebase={submitToFirebase} />
           ) : (
-            <QR value={key} id="qrcanvas" size={256} />
+            <div>
+              <p>โปรดถ่ายภาพหน้าจอไว้เพื่อยืนยันในการเข้างาน</p>
+              <QRWrapper>
+                <QR value={key} id="qrcanvas" size={256} />
+              </QRWrapper>
+              <br />
+              <Link
+                onClick={() => {
+                  setKey('')
+                }}
+              >
+                ลงทะเบียนอีกครั้ง
+              </Link>
+            </div>
           )}
         </ContentWrapper>
       </Card>
