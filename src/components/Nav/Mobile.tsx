@@ -51,12 +51,12 @@ export const Mobile = () => {
         </MobileNavCtrl>
         <animated.div style={menuTransitions}>
           <MobileMenuWrapper>
-            <Link>หน้าหลัก</Link>
-            <Link>ภายในงาน</Link>
-            <Link>แผนที่</Link>
-            <Link>ตารางเวลา</Link>
-            <Link>การเดินทาง</Link>
-            <Link>ลงทะเบียน</Link>
+            <Link href="#">หน้าหลัก</Link>
+            <Link href="#inside">ภายในงาน</Link>
+            <Link href="/assets/img/map.jpg">แผนที่</Link>
+            <Link href="#schedule">ตารางเวลา</Link>
+            <Link href="#direction">การเดินทาง</Link>
+            <Link href="#register">ลงทะเบียน</Link>
           </MobileMenuWrapper>
         </animated.div>
       </MobileNav>

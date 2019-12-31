@@ -29,12 +29,12 @@ export const Desktop = () => (
       <Title>OPENHOUSE 2020</Title>
     </Logo>
     <DesktopMenu>
-      <Link>หน้าหลัก</Link>
-      <Link>ภายในงาน</Link>
-      <Link>แผนที่</Link>
-      <Link>ตารางเวลา</Link>
-      <Link>การเดินทาง</Link>
-      <Link>ลงทะเบียน</Link>
+      <Link href="#">หน้าหลัก</Link>
+      <Link href="#inside">ภายในงาน</Link>
+      <Link href="/assets/img/map.jpg">แผนที่</Link>
+      <Link href="#schedule">ตารางเวลา</Link>
+      <Link href="#direction">การเดินทาง</Link>
+      <Link href="#register">ลงทะเบียน</Link>
       <SchoolLinkWrapper
         rel="noopener noreferrer"
         href="http://www.triamudom.ac.th/"
