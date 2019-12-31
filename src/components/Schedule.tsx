@@ -8,6 +8,7 @@ import { Wrapper } from './Wrapper'
 import { Card } from './Card'
 import { Modal, ContentWrapper, CloseWrapper } from './Modal'
 import { Auditorium } from '../data/auditorium'
+import { media } from '../design'
 
 const columns = [
   {
@@ -48,6 +49,10 @@ const ButtonWrapper = styled.div`
   display: flex;
   align-content: flex-start;
   margin-top: 24px;
+
+  ${media('TABLET')} {
+    flex-direction: column;
+  }
 `
 
 const InfoButton = styled(Button)`
@@ -56,6 +61,20 @@ const InfoButton = styled(Button)`
   :first-of-type {
     margin-left: 0;
   }
+
+  ${media('TABLET')} {
+    margin-left: 0;
+    margin-top: 8px;
+
+    :first-of-type {
+      margin-top: 0;
+    }
+  }
+`
+
+const TableTitle = styled.h1`
+  text-align: left;
+  margin-bottom: 24px;
 `
 
 export const Schedule = () => {
@@ -71,7 +90,7 @@ export const Schedule = () => {
             หอประชุม
           </InfoButton>
           <InfoButton onClick={() => setLarn70State(true)}>
-            ลานเอนกประสงค์ 70 ปี ต.อ.
+            ลานอเนกประสงค์ 70 ปี ต.อ.
           </InfoButton>
         </ButtonWrapper>
 
@@ -84,7 +103,14 @@ export const Schedule = () => {
               />
             </CloseWrapper>
             <ContentWrapper>
-              <Table columns={columns} dataSource={Auditorium} />
+              <TableTitle>หอประชุม</TableTitle>
+              <Table
+                columns={columns}
+                dataSource={Auditorium}
+                size="small"
+                scroll={{ x: 100 }}
+                pagination={{ pageSize: 100 }}
+              />
             </ContentWrapper>
           </Card>
         </Modal>
