@@ -108,7 +108,7 @@ export const Schedule = () => {
                 columns={columns}
                 dataSource={Auditorium}
                 size="small"
-                scroll={{ x: 100 }}
+                scroll={{ x: 850 }}
                 pagination={{ pageSize: 100 }}
               />
             </ContentWrapper>
