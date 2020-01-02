@@ -11,7 +11,7 @@ export const CustomHead = () => (
       content="นิทรรศการวิชาการ โรงเรียนเตรียมอุดมศึกษา ประจำปี ๒๕๖๒"
     />
     <meta
-      property="description"
+      name="description"
       content="นิทรรศการวิชาการ โรงเรียนเตรียมอุดมศึกษา ประจำปี ๒๕๖๒"
     />
     <meta
