@@ -9,6 +9,7 @@ import { Card } from './Card'
 import { Modal, ContentWrapper, CloseWrapper } from './Modal'
 import { Auditorium } from '../data/auditorium'
 import { media } from '../design'
+import { Larn70 } from '../data/larn70'
 
 const columns = [
   {
@@ -123,9 +124,17 @@ export const Schedule = () => {
                 style={{ color: 'black', cursor: 'pointer' }}
               />
             </CloseWrapper>
-            {/* <ContentWrapper>
-              <Table columns={columns} dataSource={Auditorium} />
-            </ContentWrapper> */}
+            <ContentWrapper>
+              <TableTitle>ลานอเนกประสงค์ 70 ปี ต.อ.</TableTitle>
+
+              <Table
+                columns={columns}
+                dataSource={Larn70}
+                size="small"
+                scroll={{ x: 850 }}
+                pagination={{ pageSize: 100 }}
+              />
+            </ContentWrapper>
           </Card>
         </Modal>
       </Card>
