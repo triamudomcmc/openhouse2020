@@ -65,3 +65,20 @@ export const SchoolLink = styled(BookOpen)`
   cursor: pointer;
   color: white;
 `
+export const scrollToInside = () => {
+  document
+    .getElementById('inside')
+    .scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
+export const scrollToSchedule = () => {
+  document
+    .getElementById('schedule')
+    .scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
+export const scrollToDirection = () => {
+  document
+    .getElementById('direction')
+    .scrollIntoView({ behavior: 'smooth', block: 'center' })
+}

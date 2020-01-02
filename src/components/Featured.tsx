@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { FeaturedCard } from './Card'
 import { TUCMC } from './Logo'
 import { media } from '../design'
+import { scrollToInside, scrollToSchedule } from './Nav/Common'
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -51,16 +52,6 @@ const FeaturedSlider = styled.div`
   }
 `
 
-const DiagTop = styled.div`
-  border-style: solid;
-  border-width: 50px 100vw 0 0;
-  border-color: transparent black transparent transparent;
-
-  ${media('TABLET')} {
-    margin-top: 48px;
-  }
-`
-
 const DiagBottom = styled.div`
   border-style: solid;
   border-width: 50px 100vw 0 0;
@@ -96,17 +87,17 @@ const Data = [
   {
     title: 'ซุ้มชมรม',
     src: '/assets/img/banner1',
-    link: '#inside'
+    link: scrollToInside
   },
   {
     title: 'ซุ้มสายการเรียน',
     src: '/assets/img/banner5',
-    link: '#inside'
+    link: scrollToInside
   },
   {
     title: 'การแข่งขัน',
     src: '/assets/img/banner4',
-    link: '#inside'
+    link: scrollToInside
   },
   {
     title: 'TRIAMTALK',
@@ -116,29 +107,44 @@ const Data = [
   {
     title: 'การแสดงจากชมรมต่าง ๆ',
     src: '/assets/img/banner2',
-    link: '#schedule'
+    link: scrollToSchedule
   }
 ]
 
 export const Featured = () => {
   return (
     <React.Fragment>
-      {/* <DiagTop /> */}
       <Wrapper>
         <Title>Featuring</Title>
         <FeaturedSliderWrapper>
           <FeaturedSlider>
-            {Data.map(val => (
-              <a href={val.link}>
-                <FeaturedCard
-                  width={280}
-                  height={240}
-                  bordered
-                  title={val.title}
-                  imgSrc={val.src}
-                />
-              </a>
-            ))}
+            {Data.map(val => {
+              if (typeof val.link === 'string') {
+                return (
+                  <a href={val.link}>
+                    <FeaturedCard
+                      width={280}
+                      height={240}
+                      bordered
+                      title={val.title}
+                      imgSrc={val.src}
+                    />
+                  </a>
+                )
+              } else {
+                return (
+                  <a onClick={val.link}>
+                    <FeaturedCard
+                      width={280}
+                      height={240}
+                      bordered
+                      title={val.title}
+                      imgSrc={val.src}
+                    />
+                  </a>
+                )
+              }
+            })}
           </FeaturedSlider>
         </FeaturedSliderWrapper>
         <LogoWrapper>

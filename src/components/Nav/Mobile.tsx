@@ -3,7 +3,15 @@ import styled from '@emotion/styled'
 import { animated, useSpring } from 'react-spring'
 import { Menu, X } from 'react-feather'
 
-import { Link, Wrapper, Logo, Title } from './Common'
+import {
+  Link,
+  Wrapper,
+  Logo,
+  Title,
+  scrollToInside,
+  scrollToSchedule,
+  scrollToDirection
+} from './Common'
 import { media } from '../../design'
 
 const MobileNavCtrl = styled.div`
@@ -58,10 +66,10 @@ export const Mobile = () => {
         <animated.div style={menuTransitions}>
           <MobileMenuWrapper>
             <Link href="#">หน้าหลัก</Link>
-            <Link href="#inside">ภายในงาน</Link>
+            <Link onClick={scrollToInside}>ภายในงาน</Link>
             <Link href="/assets/img/map.jpg">แผนที่</Link>
-            <Link href="#schedule">ตารางเวลา</Link>
-            <Link href="#direction">การเดินทาง</Link>
+            <Link onClick={scrollToSchedule}>ตารางเวลา</Link>
+            <Link onClick={scrollToDirection}>การเดินทาง</Link>
           </MobileMenuWrapper>
         </animated.div>
       </MobileNav>

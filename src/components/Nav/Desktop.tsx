@@ -1,5 +1,14 @@
 import React from 'react'
-import { SchoolLink, Link, Wrapper, Logo, Title } from './Common'
+import {
+  SchoolLink,
+  Link,
+  Wrapper,
+  Logo,
+  Title,
+  scrollToInside,
+  scrollToSchedule,
+  scrollToDirection
+} from './Common'
 import styled from '@emotion/styled'
 import { media } from '../../design'
 
@@ -30,10 +39,10 @@ export const Desktop = () => (
     </Logo>
     <DesktopMenu>
       <Link href="#">หน้าหลัก</Link>
-      <Link href="#inside">ภายในงาน</Link>
+      <Link onClick={scrollToInside}>ภายในงาน</Link>
       <Link href="/assets/img/map.jpg">แผนที่</Link>
-      <Link href="#schedule">ตารางเวลา</Link>
-      <Link href="#direction">การเดินทาง</Link>
+      <Link onClick={scrollToSchedule}>ตารางเวลา</Link>
+      <Link onClick={scrollToDirection}>การเดินทาง</Link>
       <SchoolLinkWrapper
         rel="noopener noreferrer"
         href="http://www.triamudom.ac.th/"
