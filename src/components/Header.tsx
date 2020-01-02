@@ -44,7 +44,7 @@ const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: calc(95vh - 72px);
   padding-left: 24px;
 `
 
