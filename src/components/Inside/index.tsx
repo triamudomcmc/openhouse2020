@@ -24,7 +24,7 @@ const Link = styled(DefaultLink)`
 
   ${media('TABLET')} {
     text-align: center !important;
-    margin: 0;
+    margin-top: 8px;
   }
 `
 
