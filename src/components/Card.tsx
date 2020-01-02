@@ -75,6 +75,10 @@ const CustomCard = styled(Card)`
   :hover {
     border-color: white;
   }
+
+  ${media('TABLET')} {
+    width: 280px;
+  }
 `
 
 export const FeaturedCard = (props: {

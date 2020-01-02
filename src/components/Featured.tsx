@@ -45,6 +45,10 @@ const FeaturedSlider = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  ${media('TABLET')} {
+    grid-column-gap: 12px;
+  }
 `
 
 const DiagTop = styled.div`
