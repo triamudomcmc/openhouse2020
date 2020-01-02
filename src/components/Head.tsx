@@ -3,6 +3,7 @@ import { Head } from 'next/document'
 
 export const CustomHead = () => (
   <Head>
+    <link rel="canonical" href="https://openhouse.triamudom.ac.th/" />
     <meta property="og:url" content="https://openhouse.triamudom.ac.th/" />
     <meta property="og:title" content="Triam Udom Open House 2020" />
     <meta
