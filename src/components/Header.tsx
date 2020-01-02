@@ -15,7 +15,7 @@ const fadeIn = keyframes`
 `
 
 const Wrapper = styled.div`
-  min-height: calc(95vh - 47px);
+  min-height: calc(95vh - 72px);
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
@@ -47,8 +47,6 @@ const TitleWrapper = styled.div`
   min-height: 100vh;
   padding-left: 24px;
 `
-
-const RegisterWrapper = styled.div``
 
 export const Header = () => {
   return (
