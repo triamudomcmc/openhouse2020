@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext
 } from 'next/document'
+import { CustomHead } from '../components/Head'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -15,7 +16,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="th">
-        <Head />
+        <CustomHead />
         <body>
           <Main />
           <NextScript />
