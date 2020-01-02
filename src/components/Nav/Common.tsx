@@ -35,9 +35,9 @@ export const Link = styled.a`
     margin-right: 0px;
   }
 
-  /* :hover {
-    color: black;
-  } */
+  :hover {
+    color: white;
+  }
 
   ${media('TABLET')} {
     margin-right: 0px;
