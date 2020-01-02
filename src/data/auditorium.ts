@@ -5,7 +5,7 @@ export const Auditorium: Data[] = [
     date: 'Thu, 09 Jan 2020',
     startTime: '10:05',
     endTime: '10:50',
-    name: 'EP Chorus',
+    name: 'A Midspring Daydream',
     by: 'ชมรมขับร้องประสานเสียง'
   },
   {
@@ -40,7 +40,7 @@ export const Auditorium: Data[] = [
     date: 'Thu, 09 Jan 2020',
     startTime: '15:40',
     endTime: '16:10',
-    name: 'French Chorus',
+    name: 'APRÉS LA PLUIE, LE BEAU TEMPS',
     by: 'French Chorus'
   },
   {
@@ -61,21 +61,21 @@ export const Auditorium: Data[] = [
     date: 'Fri, 10 Jan 2020',
     startTime: '11:50',
     endTime: '12:20',
-    name: 'French Chorus',
+    name: 'APRÉS LA PLUIE, LE BEAU TEMPS',
     by: 'French Chorus'
   },
   {
     date: 'Fri, 10 Jan 2020',
     startTime: '12:20',
     endTime: '13:50',
-    name: 'ภาพยนตร์สั้น',
+    name: 'True Colour',
     by: 'ชมรมภาพยนตร์สั้นและสื่อโทรทัศน์'
   },
   {
     date: 'Fri, 10 Jan 2020',
     startTime: '13:50',
     endTime: '14:35',
-    name: 'EP Chorus',
+    name: 'A Midspring Daydream',
     by: 'ชมรมขับร้องประสานเสียง'
   },
   {
