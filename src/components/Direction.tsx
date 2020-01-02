@@ -15,6 +15,14 @@ const List = styled.ul`
   list-style-type: none;
   padding-inline-start: 0;
   margin-block-start: 0.75em;
+
+  li {
+    margin-top: 18px;
+
+    :first-of-type {
+      margin-top: 0;
+    }
+  }
 `
 
 const SubTitle = styled.h2`
@@ -62,13 +70,11 @@ export const Direction = () => (
           <br />
           ถนนอังรีดูนังต์: 16, 21
         </li>
-        <br />
         <li>
           <ListTitle>รถไฟฟ้า BTS สถานีสยาม</ListTitle>{' '}
           โดยสามารถเดินต่อมายังโรงเรียนเตรียมอุดมศึกษาได้ทั้งฝั่งถนนพญาไท (900
           เมตร) และถนนอังรีดูนังต์ (500-800 เมตร)
         </li>
-        <br />
         <li>
           <ListTitle>รถไฟฟ้า MRT สถานีสามย่าน</ListTitle>{' '}
           โดยสามารถเดินต่อมายังโรงเรียนเตรียมอุดมศึกษาได้ทั้งฝั่งถนนพญาไท (800
@@ -81,7 +87,6 @@ export const Direction = () => (
           <ListTitle>ประตูถนนพญาไท</ListTitle>(ตึก 1)
           ใกล้กับคณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
         </li>
-        <br />
         <li>
           <ListTitle>ประตูถนนอังรีดูนังต์</ListTitle> (ตึก 3){' '}
           เชื่อมต่อกับโรงเรียนสาธิตมหาวิทยาลัยศรีนครินทรวิโรฒ ปทุมวัน
