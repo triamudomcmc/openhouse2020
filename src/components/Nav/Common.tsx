@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: baseline;
   margin: auto;
-  max-width: 1000px;
+  max-width: 1200px;
   padding-top: 24px;
 
   ${media('IPAD_PRO')} {
@@ -26,7 +26,7 @@ export const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
   font-size: 16px;
-  color: #515151;
+  color: white;
   font-weight: 700;
   font-family: ${Fonts.display};
   transition: color 1s;
@@ -35,9 +35,9 @@ export const Link = styled.a`
     margin-right: 0px;
   }
 
-  :hover {
+  /* :hover {
     color: black;
-  }
+  } */
 
   ${media('TABLET')} {
     margin-right: 0px;
@@ -55,6 +55,7 @@ export const Logo = styled.div`
 `
 
 export const Title = styled.h1`
+  color: white;
   font-weight: 800;
   font-size: 16px;
   z-index: 9999;
@@ -62,4 +63,5 @@ export const Title = styled.h1`
 
 export const SchoolLink = styled(BookOpen)`
   cursor: pointer;
+  color: white;
 `

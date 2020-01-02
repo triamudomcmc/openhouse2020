@@ -123,7 +123,7 @@ const Data = [
 export const Featured = () => {
   return (
     <React.Fragment>
-      <DiagTop />
+      {/* <DiagTop /> */}
       <Wrapper>
         <Title>Featuring</Title>
         <FeaturedSliderWrapper>

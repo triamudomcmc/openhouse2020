@@ -6,7 +6,6 @@ import { RadioChangeEvent } from 'antd/lib/radio'
 import { FormComponentProps } from 'antd/lib/form'
 
 import { Card } from './Card'
-import { Wrapper } from './Wrapper'
 import { ContentWrapper } from './Modal'
 import { api } from '../lib/api'
 import { Link } from './Nav/Common'

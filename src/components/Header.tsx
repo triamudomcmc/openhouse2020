@@ -16,7 +16,7 @@ const fadeIn = keyframes`
 
 const Wrapper = styled.div`
   min-height: calc(95vh - 72px);
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -37,6 +37,7 @@ const Title = styled.h1`
   font-weight: 800;
   font-size: 72px;
   line-height: 1.15;
+  color: white;
 `
 
 const TitleWrapper = styled.div`

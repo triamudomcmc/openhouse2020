@@ -6,7 +6,6 @@ const ClubsWrapper = styled.div`
   overflow: auto;
 `
 const List = styled.ul`
-  list-style-type: none;
   padding-inline-start: 0;
   margin-block-start: 0.75em;
 `

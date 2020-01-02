@@ -6,6 +6,7 @@ import { media } from '../../design'
 import { Wrapper } from '../Wrapper'
 import { Clubs } from './Clubs'
 import { Programs } from './Programs'
+import { Contests } from './Contests'
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -42,12 +43,14 @@ export const Inside = () => {
     'clubs' | 'programs' | 'contests'
   >('clubs')
 
-  const getCurrent = () => {
+  const getCurrentTab = () => {
     switch (currentTab) {
       case 'clubs':
         return <Clubs />
       case 'programs':
         return <Programs />
+      case 'contests':
+        return <Contests />
     }
   }
 
@@ -56,12 +59,12 @@ export const Inside = () => {
       <MenuWrapper>
         <Link onClick={() => setCurrentTab('clubs')}>ชมรม</Link>
         <Link onClick={() => setCurrentTab('programs')}>สายการเรียน</Link>
-        <Link>การแข่งขัน</Link>
+        <Link onClick={() => setCurrentTab('contests')}>การแข่งขัน</Link>
       </MenuWrapper>
       <CardWrapper>
         <Card height={400} width={600} curved padding bg="white">
           <CardTitle>ภายในงาน</CardTitle>
-          {getCurrent()}
+          {getCurrentTab()}
         </Card>
       </CardWrapper>
     </Wrapper>

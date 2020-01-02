@@ -44,9 +44,15 @@ export const Mobile = () => {
             <Title>OPENHOUSE 2020</Title>
           </Logo>
           {expanded ? (
-            <X onClick={() => setExpanded(expanded => !expanded)} />
+            <X
+              onClick={() => setExpanded(expanded => !expanded)}
+              style={{ color: 'white' }}
+            />
           ) : (
-            <Menu onClick={() => setExpanded(expanded => !expanded)} />
+            <Menu
+              onClick={() => setExpanded(expanded => !expanded)}
+              style={{ color: 'white' }}
+            />
           )}
         </MobileNavCtrl>
         <animated.div style={menuTransitions}>
