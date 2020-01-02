@@ -78,6 +78,14 @@ const TableTitle = styled.h1`
   margin-bottom: 24px;
 `
 
+const SubTitle = styled.h2`
+  margin-top: 24px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+`
+
 export const Schedule = () => {
   const [auditoriumState, setAuditoriumState] = useState(false)
   const [larn70State, setLarn70State] = useState(false)
@@ -94,6 +102,7 @@ export const Schedule = () => {
             ลานอเนกประสงค์ 70 ปี ต.อ.
           </InfoButton>
         </ButtonWrapper>
+        <SubTitle>NOW SHOWING!</SubTitle>
 
         <Modal open={auditoriumState} setModalState={setAuditoriumState}>
           <Card width={750} height={600} bg="white" curved padding>
