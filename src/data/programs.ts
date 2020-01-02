@@ -9,6 +9,12 @@ export const programsList = [
     title: 'GIFTED SCIENCE'
   },
   {
+    title: 'GIFTED THAI'
+  },
+  {
+    title: 'ภาษา-คณิต'
+  },
+  {
     title: 'ภาษา-เกาหลี'
   },
   {

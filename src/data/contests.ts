@@ -12,9 +12,6 @@ export const contestsList = [
     title: 'Debate Challenge'
   },
   {
-    title: 'TUMSO 18th'
-  },
-  {
     title: 'การแข่งขัน Board Game Azul'
   },
   {
