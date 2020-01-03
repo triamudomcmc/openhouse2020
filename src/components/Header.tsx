@@ -49,6 +49,12 @@ const TitleWrapper = styled.div`
   padding-left: 24px;
 `
 
+const RegisterWrapper = styled.div`
+  ${media('TABLET')} {
+    padding-bottom: 48px;
+  }
+`
+
 export const Header = () => {
   return (
     <Wrapper>
@@ -59,8 +65,9 @@ export const Header = () => {
           <Title>2020</Title>
         </div>
       </TitleWrapper>
-
-      <Register />
+      <RegisterWrapper>
+        <Register />
+      </RegisterWrapper>
     </Wrapper>
   )
 }
