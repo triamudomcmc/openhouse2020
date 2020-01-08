@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { X } from 'react-feather'
 import styled from '@emotion/styled'
 
@@ -10,6 +10,8 @@ import { Modal, ContentWrapper, CloseWrapper } from './Modal'
 import { Auditorium } from '../data/auditorium'
 import { media } from '../design'
 import { Larn70 } from '../data/larn70'
+import { checkTime } from '../utils/checkTime'
+import { Data } from '../@types/data'
 
 const columns = [
   {
@@ -86,9 +88,21 @@ const SubTitle = styled.h2`
   line-height: 1.15;
 `
 
+const NowShowingWrapper = styled.div`
+  text-align: left;
+  padding-top: 24px;
+`
+
 export const Schedule = () => {
   const [auditoriumState, setAuditoriumState] = useState(false)
   const [larn70State, setLarn70State] = useState(false)
+  const [currentAuditorium, setCurAuditorium] = useState<Data[]>([])
+  const [currentLarn70, setCurLarn70] = useState<Data[]>([])
+
+  useEffect(() => {
+    setCurAuditorium(Auditorium.filter(checkTime))
+    setCurLarn70(Larn70.filter(checkTime))
+  }, [])
 
   return (
     <Wrapper>
@@ -103,6 +117,20 @@ export const Schedule = () => {
           </InfoButton>
         </ButtonWrapper>
         <SubTitle>NOW SHOWING!</SubTitle>
+        <NowShowingWrapper>
+          <p>
+            หอประชุม:{' '}
+            {currentAuditorium.length
+              ? currentAuditorium.map(data => data.name)
+              : 'ยังไม่มีการแสดงใด ๆ ในขณะนี้'}
+          </p>
+          <p>
+            ลานอเนกประสงค์ 70 ปี ต.อ.:{' '}
+            {currentLarn70.length
+              ? currentLarn70.map(data => data.name)
+              : 'ยังไม่มีการแสดงใด ๆ ในขณะนี้'}
+          </p>
+        </NowShowingWrapper>
 
         <Modal open={auditoriumState} setModalState={setAuditoriumState}>
           <Card width={750} height={600} bg="white" curved padding>
