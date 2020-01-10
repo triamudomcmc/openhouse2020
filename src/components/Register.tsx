@@ -8,7 +8,7 @@ import { FormComponentProps } from 'antd/lib/form'
 import { Card } from './Card'
 import { ContentWrapper } from './Modal'
 import { api } from '../lib/api'
-import { Link } from './Nav/Common'
+import { Link, scrollToRegister } from './Nav/Common'
 
 const CardTitle = styled.h1`
   text-align: left;
@@ -194,6 +194,7 @@ export const Register = () => {
       )
 
       setKey(res.data)
+      scrollToRegister()
       resetForm()
     } catch (err) {
       console.error(err)

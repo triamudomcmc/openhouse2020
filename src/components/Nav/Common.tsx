@@ -82,3 +82,9 @@ export const scrollToDirection = () => {
     .getElementById('direction')
     .scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
+
+export const scrollToRegister = () => {
+  document
+    .getElementById('register')
+    .scrollIntoView({ behavior: 'smooth', block: 'end' })
+}

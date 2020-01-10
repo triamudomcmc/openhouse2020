@@ -25,7 +25,7 @@ export default () => {
         <section>
           <Nav />
         </section>
-        <section id="header">
+        <section id="register">
           <Header />
         </section>
       </BackgroundWrapper>
