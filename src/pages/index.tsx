@@ -12,7 +12,7 @@ import { Direction } from '../components/Direction'
 import { Schedule } from '../components/Schedule'
 
 const BackgroundWrapper = styled.div`
-  background-image: url('/assets/img/bg.webp'), url('/assets/img/bg.jpg');
+  background-image: url('/assets/img/bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
 `
